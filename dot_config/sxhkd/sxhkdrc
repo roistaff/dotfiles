@@ -73,7 +73,7 @@ super + {_,shift + }p
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 super + x
-	eww open bar
+	if [ "$(eww active-windows)" = "" ];then eww open bar;else eww close bar;fi
 #	eval "$(echo "poweroff|reboot|suspend" | rofi -dmenu -p "wanna sleep?" -sep "|")"
 # focus the last node/desktop
 super + {grave,Tab}
